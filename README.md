@@ -1,24 +1,16 @@
-# README
+## Setup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+`rails new Project --database=postgresql --webpack=react`
 
-Things you may want to cover:
+`rails g react:install`
 
-* Ruby version
+Add `//= require react` to `application.js`.
 
-* System dependencies
+`rails g react:component FileName`
 
-* Configuration
+Add `<%= javascript_pack_tag 'application' %>
+<%= react_component 'FileName', { #server-side props
+}, prerender: true %>` to the appropriate view.
+Add `<%= javascript_pack_tag 'application' %>` to `application.html.erb`.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+On the client-side, use `ReactDOM.hydrate`. For this to work, put `<div id='replaced-with-js'>`, wrapping `<%= yield %>` in `application.html.erb`.
