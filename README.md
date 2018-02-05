@@ -14,3 +14,5 @@ Add `<%= javascript_pack_tag 'application' %>
 Add `<%= javascript_pack_tag 'application' %>` to `application.html.erb`.
 
 On the client-side, use `ReactDOM.hydrate`. For this to work, put `<div id='replaced-with-js'>`, wrapping `<%= yield %>` in `application.html.erb`.
+
+> [react-rails](https://github.com/reactjs/react-rails)
