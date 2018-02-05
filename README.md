@@ -6,7 +6,7 @@
 
 Add `//= require react` to `application.js`.
 
-`rails g react:component FileName` (the component appears in `app/javascript/components`)
+`rails g react:component FileName --es6` (the component appears in `app/javascript/components`)
 
 Add `<%= javascript_pack_tag 'application' %>
 <%= react_component 'FileName', {}, prerender: true %>` to the appropriate view (e.g. the view your default route points to). _You can put props for the server-side component in the empty options object._
