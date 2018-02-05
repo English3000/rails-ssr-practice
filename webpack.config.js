@@ -23,7 +23,13 @@ plugins = plugins.concat(
 
 module.exports = {
   context: __dirname,
-  entry: ["babel-polyfill", "./frontend/index.js"],
+  entry: {
+    'app': [
+        'babel-polyfill',
+        'react-hot-loader/patch',
+        './frontend/index'
+      ]
+  },
   output: {
     path: path.resolve(__dirname, "app", "assets", "javascripts"),
     filename: "bundle.js"
