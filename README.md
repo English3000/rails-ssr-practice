@@ -2,6 +2,8 @@
 
 `rails new Project --database=postgresql --webpack=react`
 
+In Gemfile, add `gem 'react-rails'` and then run `bundle update`.
+
 `rails g react:install`
 
 Add `//= require react` to `application.js`.
