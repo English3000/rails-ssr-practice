@@ -6,10 +6,10 @@
 
 Add `//= require react` to `application.js`.
 
-`rails g react:component FileName`
+`rails g react:component FileName` (the component appears in `app/javascript/components`)
 
 Add `<%= javascript_pack_tag 'application' %>
-<%= react_component 'FileName', {}, prerender: true %>` to the appropriate view. _(You can put props in the empty options object.)_
+<%= react_component 'FileName', {}, prerender: true %>` to the appropriate view (e.g. the view your default route points to). _You can put props for the server-side component in the empty options object._
 Add `<%= javascript_pack_tag 'application' %>` to `application.html.erb`.
 
 On the client-side, [use](https://github.com/English3000/rails-ssr-practice/blob/master/frontend/index.js) `ReactDOM.hydrate`. For this to work, put `<div id='replaced-with-js'>`, wrapping `<%= yield %>`, in `application.html.erb`.
