@@ -16,6 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.getState = store.getState;
 
-  ReactDOM.render(<Setup store={store}/>, document.getElementById('current-page'));
-  console.log('client');
+  ReactDOM.hydrate(<Setup store={store}/>, document.getElementById('current-page'));
+  console.log("client");
 });
